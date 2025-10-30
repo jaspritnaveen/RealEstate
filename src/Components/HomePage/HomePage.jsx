@@ -524,28 +524,7 @@ const ContactUsSection = () => {
         </div>
 
         {/* Contact Info Cards */}
-        <div className="row mt-5 justify-content-center g-4">
-          <div className="col-md-5">
-            <div
-              className="card p-4 text-center h-100 shadow-sm border-0 rounded-4"
-              style={{ backgroundColor: PRIMARY_COLOR, color: "white" }}
-            >
-              <i className="bi bi-telephone-fill display-4 mb-3"></i>
-              <h5 className="fw-bold">Phone Number</h5>
-              <p className="lead m-0">010-020-0340</p>
-            </div>
-          </div>
-          <div className="col-md-5">
-            <div
-              className="card p-4 text-center h-100 shadow-sm border-0 rounded-4"
-              style={{ backgroundColor: PRIMARY_COLOR, color: "white" }}
-            >
-              <i className="bi bi-envelope-fill display-4 mb-3"></i>
-              <h5 className="fw-bold">Business Email</h5>
-              <p className="lead m-0">info@kanestproperties.com</p>
-            </div>
-          </div>
-        </div>
+      
       </div>
     </section>
   );
