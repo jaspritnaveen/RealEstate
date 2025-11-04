@@ -1,7 +1,12 @@
 // src/Components/PropertyCard/PropertyCard.jsx
 import React from "react";
-import { PRIMARY_COLOR, ACCENT_COLOR } from "../../utils/constants";
+// REMOVED: import { PRIMARY_COLOR, ACCENT_COLOR } from "../../utils/constants";
 // import "./PropertyCard.css"; // Optional: for custom styles
+
+// --- Local Hardcoded Constants ---
+const MANUAL_PRIMARY_COLOR = "#00A896";
+const MANUAL_ACCENT_COLOR = "#FFC107";
+// ---------------------------------
 
 const PropertyCard = ({ title, price, location, imageUrl }) => (
   <div className="col-md-6 col-lg-4 mb-4">
@@ -20,12 +25,15 @@ const PropertyCard = ({ title, price, location, imageUrl }) => (
         style={{ height: "220px", objectFit: "cover" }}
       />
       <div className="card-body">
-        <h5 className="card-title fw-bold" style={{ color: PRIMARY_COLOR }}>
+        <h5
+          className="card-title fw-bold"
+          style={{ color: MANUAL_PRIMARY_COLOR }}
+        >
           {title}
         </h5>
         <h6
           className="card-subtitle mb-2 fw-bolder"
-          style={{ color: ACCENT_COLOR }}
+          style={{ color: MANUAL_ACCENT_COLOR }}
         >
           {price}
         </h6>
@@ -37,7 +45,10 @@ const PropertyCard = ({ title, price, location, imageUrl }) => (
           <a
             href="#"
             className="btn btn-outline-dark rounded-pill fw-bold"
-            style={{ borderColor: PRIMARY_COLOR, color: PRIMARY_COLOR }}
+            style={{
+              borderColor: MANUAL_PRIMARY_COLOR,
+              color: MANUAL_PRIMARY_COLOR,
+            }}
           >
             View Details
           </a>

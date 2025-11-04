@@ -1,11 +1,14 @@
 // src/Components/ContactUs/ContactUsSection.jsx
 import React, { useState } from "react";
-// Assuming constants are imported from a utility file outside the Components folder
-import {
-  PRIMARY_COLOR,
-  ACCENT_COLOR,
-  googleMapEmbedUrl,
-} from "../../utils/constants";
+// REMOVED: import of all constants from "../../utils/constants"
+
+// --- Local Hardcoded Constants ---
+const MANUAL_PRIMARY_COLOR = "#00A896";
+const MANUAL_ACCENT_COLOR = "#FFC107";
+const MANUAL_MAP_URL =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15544.75549068018!2d80.20731405!3d13.07639535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52641b27b9a50b%3A0xf65ee5c0292b3a9!2sNavalur%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1701198567112!5m2!1sen!2sin";
+// ---------------------------------
+
 // import "./ContactUsSection.css"; // Optional: for custom styles
 
 const ContactUsSection = () => {
@@ -40,14 +43,15 @@ const ContactUsSection = () => {
     <section id="contact" className="py-5 bg-white">
       <div className="container">
         <h2 className="text-center mb-5 fw-bold text-dark">
-          Get In <span style={{ color: PRIMARY_COLOR }}>Touch</span>
+          Get In <span style={{ color: MANUAL_PRIMARY_COLOR }}>Touch</span>
         </h2>
         <div className="row g-4 justify-content-center">
           {/* Google Map Column */}
           <div className="col-lg-6">
             <div className="card p-3 shadow-sm h-100 rounded-4">
               <iframe
-                src={googleMapEmbedUrl}
+                // Replaced googleMapEmbedUrl
+                src={MANUAL_MAP_URL}
                 width="100%"
                 height="450"
                 style={{ border: 0, borderRadius: "0.5rem" }}
@@ -62,7 +66,10 @@ const ContactUsSection = () => {
           {/* Contact Form Column */}
           <div className="col-lg-6">
             <div className="card p-4 shadow-sm h-100 rounded-4">
-              <h5 className="mb-4 fw-bold" style={{ color: PRIMARY_COLOR }}>
+              <h5
+                className="mb-4 fw-bold"
+                style={{ color: MANUAL_PRIMARY_COLOR }}
+              >
                 Send us a message
               </h5>
               <form onSubmit={handleSubmit}>
@@ -140,7 +147,8 @@ const ContactUsSection = () => {
                   <button
                     type="submit"
                     className="btn btn-lg rounded-pill fw-bold text-dark"
-                    style={{ backgroundColor: ACCENT_COLOR }}
+                    // Replaced ACCENT_COLOR
+                    style={{ backgroundColor: MANUAL_ACCENT_COLOR }}
                   >
                     Send Message
                   </button>
@@ -155,7 +163,8 @@ const ContactUsSection = () => {
           <div className="col-md-5">
             <div
               className="card p-4 text-center h-100 shadow-sm border-0 rounded-4"
-              style={{ backgroundColor: PRIMARY_COLOR, color: "white" }}
+              // Replaced PRIMARY_COLOR
+              style={{ backgroundColor: MANUAL_PRIMARY_COLOR, color: "white" }}
             >
               <i className="bi bi-telephone-fill display-4 mb-3"></i>
               <h5 className="fw-bold">Phone Number</h5>
@@ -165,7 +174,8 @@ const ContactUsSection = () => {
           <div className="col-md-5">
             <div
               className="card p-4 text-center h-100 shadow-sm border-0 rounded-4"
-              style={{ backgroundColor: PRIMARY_COLOR, color: "white" }}
+              // Replaced PRIMARY_COLOR
+              style={{ backgroundColor: MANUAL_PRIMARY_COLOR, color: "white" }}
             >
               <i className="bi bi-envelope-fill display-4 mb-3"></i>
               <h5 className="fw-bold">Business Email</h5>

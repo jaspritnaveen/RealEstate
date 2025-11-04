@@ -1,11 +1,14 @@
 // src/Components/Navbar/Header.jsx
 import React from "react";
-import {
-  PRIMARY_COLOR,
-  ACCENT_COLOR,
-  logoUrl,
-  navLinks,
-} from "../../utils/constants";
+// REMOVED: import of all constants from "../../utils/constants"
+
+// --- Local Hardcoded Constants (Pulled from previous utils/constants) ---
+const MANUAL_ACCENT_COLOR = "#FFC107"; // Warning/Orange for CTAs
+const MANUAL_PRIMARY_COLOR_HEX = "00A896"; // Professional Teal/Cyan (used in logo placeholder)
+const logoUrl = "https://placehold.co/45x45/00A896/ffffff?text=KPL";
+const navLinks = ["Home", "Buy", "Rent", "Sell", "All Properties", "Contact"];
+// ------------------------------------------------------------------------
+
 // import "./Header.css"; // Optional: for custom styles
 
 const Header = () => {
@@ -23,8 +26,7 @@ const Header = () => {
             style={{ width: "45px", height: "45px", objectFit: "cover" }}
             onError={(e) => {
               e.target.onerror = null;
-              e.target.src =
-                "https://placehold.co/45x45/00A896/ffffff?text=LOGO";
+              e.target.src = `https://placehold.co/45x45/${MANUAL_PRIMARY_COLOR_HEX}/ffffff?text=LOGO`;
             }}
           />
           <span
@@ -67,7 +69,10 @@ const Header = () => {
               <a
                 className="btn fw-bold px-4 py-2 mt-2 mt-lg-0 rounded-pill text-dark text-uppercase shadow-sm"
                 href="#contact"
-                style={{ backgroundColor: ACCENT_COLOR, fontSize: "0.85rem" }}
+                style={{
+                  backgroundColor: MANUAL_ACCENT_COLOR,
+                  fontSize: "0.85rem",
+                }}
               >
                 Contact Agent
               </a>
