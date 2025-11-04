@@ -1,0 +1,18 @@
+/* src/Components/Hero/Hero.css */
+
+/* Define the overlay gradient previously set in the mask div */
+.hero-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* Define the search button background color (previously ACCENT_COLOR: #FFC107) */
+.hero-search-btn {
+  /* You may need to use :global() or a setup that allows using CSS variables 
+       if your bundler prevents standard variable usage in component-specific CSS */
+  background-color: #ffc107;
+}
